@@ -3,6 +3,9 @@
 #define HEADER_PROBLEMS_13_18_H_
 #include <iostream>
 #include <string>
+#include <vector>
+#include <map>
+#include <limits>
 
 namespace CodeChallengesOf30Days
 {
@@ -29,6 +32,14 @@ namespace CodeChallengesOf30Days
 			virtual ~MyBook();
 	};
 
+	class Difference {
+	    private:
+	    std::vector<int> elements;
+	  	public:
+	    Difference(std::vector<int> m_elements);
+	  	int maximumDifference;
+	  	void computeDifference();
+	};
 	void AbstractClasses();
 	void Scope();
 }

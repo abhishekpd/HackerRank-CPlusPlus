@@ -1,6 +1,7 @@
 #include "../header/Problems_13-18.h"
 #include <limits>
 #include <iostream>
+#include <vector>
 
 CodeChallengesOf30Days::MyBook::MyBook(std::string m_title,std::string m_author,int price) :
 									Book(m_title,m_author), m_price(price)
@@ -39,7 +40,33 @@ void CodeChallengesOf30Days::AbstractClasses()
 	    novel.display();
 }
 
+CodeChallengesOf30Days::Difference::Difference(std::vector<int> m_elements)
+	: elements(m_elements)
+{
+}
+void CodeChallengesOf30Days::Difference::computeDifference()
+{
+	std::cout << "Array Elements are \t";
+	for(int i=0;i<this->elements.size();i++)
+		std::cout << "\t" << this->elements.at(i);
+
+	this->maximumDifference = 200;
+}
+
 void CodeChallengesOf30Days::Scope()
 {
+	 int N;
+	 std::cin >> N;
+	 std::vector<int> a;
 
+	 for (int i = 0; i < N; i++) {
+	        int e;
+	        std::cin >> e;
+	        a.push_back(e);
+	 }
+
+	Difference d(a);
+	d.computeDifference();
+	std::cout << "Maximum Difference is  \t" ;
+	std::cout << d.maximumDifference;
 }
