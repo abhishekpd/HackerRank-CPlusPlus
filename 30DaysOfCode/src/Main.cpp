@@ -1,9 +1,62 @@
 #include <iostream>
+#include "../header/Problmes_0-6.h"
+#include "../header/Problems_7-12.h"
+#include "../header/Problems_13-18.h"
+#include <cstdlib>
+#include <limits>
+#include <iomanip>
 
 int main()
 {
 	int m_choice;
-	std::cout << "\n 30 Days of Code Challenges   Details " << std::endl;
-
+	do
+	{
+		//if(system("CLS")) system("clear");
+		std::cout << "\n 30 Days of Code Challenges   Details " << std::endl;
+		std::cout << "Day 0 : Hello, World" << std::endl;
+		std::cout << "Day 1: Data Types" << std::endl;
+		std::cout << "Day 2: Operators" << std::endl;
+		std::cout << "Day 8: Dictionaries and Maps" << std::endl;
+		std::cout << "Day 9: Recursion" << std::endl;
+		std::cout << "Day 11: 2D Arrays" << std::endl;
+		std::cout << "Day 12: Inheritance" << std::endl;
+		std::cout << "Day 13: Abstract Classes" << std::endl;
+		std::cout << "Day 14: Scope" << std::endl;
+		std::cout << "\nPlease enter the Input \t";
+		std::cin >> m_choice;
+		switch(m_choice)
+		{
+			case 0:
+				CodeChallengesOf30Days::HelloWorld();
+				break;
+			case 1:
+				CodeChallengesOf30Days::DataTypes();
+				break;
+			case 2:
+				CodeChallengesOf30Days::Operators();
+				break;
+			case 8:
+				CodeChallengesOf30Days::DictionariesAndMaps();
+					break;
+			case 9:
+				CodeChallengesOf30Days::Recursion();
+				break;
+			case 11:
+				CodeChallengesOf30Days::TwoDArrays();
+				break;
+			case 12:
+				CodeChallengesOf30Days::Inheritance();
+				break;
+			case 13:
+				CodeChallengesOf30Days::AbstractClasses();
+				break;
+			case 14:
+				CodeChallengesOf30Days::Scope();
+				break;
+			default:
+				break;
+		}
+	}while(m_choice != 99);
 	return 0;
 }
+

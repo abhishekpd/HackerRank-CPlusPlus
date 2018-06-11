@@ -10,6 +10,7 @@ namespace IntroductionChallenges
 	void HelloWorld();
 	void InputandOutput();
 	void BasicDataTypes();
+	void ConditionalStatements();
 };
 
 
