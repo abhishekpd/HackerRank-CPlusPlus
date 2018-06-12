@@ -46,11 +46,17 @@ CodeChallengesOf30Days::Difference::Difference(std::vector<int> m_elements)
 }
 void CodeChallengesOf30Days::Difference::computeDifference()
 {
-	std::cout << "Array Elements are \t";
-	for(int i=0;i<this->elements.size();i++)
-		std::cout << "\t" << this->elements.at(i);
+	int m_SmallestElemet = this->elements.at(0);
+	int m_HighestElemet = this->elements.at(0);
+	for(unsigned int i=1;i<this->elements.size();i++)
+	{
+		if(this->elements.at(i) >= m_HighestElemet)
+			m_HighestElemet = this->elements.at(i) ;
 
-	this->maximumDifference = 200;
+		if(this->elements.at(i) <= m_SmallestElemet)
+			m_SmallestElemet = this->elements.at(i);
+	}
+	this->maximumDifference = m_HighestElemet -m_SmallestElemet ;
 }
 
 void CodeChallengesOf30Days::Scope()
@@ -69,4 +75,55 @@ void CodeChallengesOf30Days::Scope()
 	d.computeDifference();
 	std::cout << "Maximum Difference is  \t" ;
 	std::cout << d.maximumDifference;
+}
+
+
+CodeChallengesOf30Days::Node::Node(int m_data)
+			: data(m_data), next(nullptr)
+{
+}
+
+CodeChallengesOf30Days::Node* CodeChallengesOf30Days::Solution::insert(CodeChallengesOf30Days::Node* m_head, int m_data)
+{
+	CodeChallengesOf30Days::Node* t_head;
+	t_head = m_head;
+	CodeChallengesOf30Days::Node *new_Node = new Node(m_data);
+	if(t_head ==  nullptr)
+	{
+		t_head = new_Node;
+		m_head = t_head;
+	}
+	else
+	{
+		  while(t_head->next != nullptr)
+		  {
+			  t_head=t_head->next;
+		  }
+		  t_head->next = new_Node;
+	}
+	return m_head;
+}
+
+
+void CodeChallengesOf30Days::Solution::display(Node *head)
+{
+	Node *start=head;
+	while(start)
+	{
+	  std::cout<<start->data<<" ";
+	  start=start->next;
+	}
+}
+
+void CodeChallengesOf30Days::LinkedList()
+{
+	Node* head=NULL;
+	Solution mylist;
+	int T,data;
+	std::cin>>T;
+	while(T-->0){
+		std::cin>>data;
+		head=mylist.insert(head,data);
+	}
+	mylist.display(head);
 }

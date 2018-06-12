@@ -40,8 +40,22 @@ namespace CodeChallengesOf30Days
 	  	int maximumDifference;
 	  	void computeDifference();
 	};
+	class Node
+	{
+	    public:
+	        int data;
+	        Node *next;
+	        Node(int d);
+	};
+	class Solution{
+	    public:
+		 	 Node* insert(Node *head,int data);
+			void display(Node *head);
+	};
+
 	void AbstractClasses();
 	void Scope();
+	void LinkedList();
 }
 
 

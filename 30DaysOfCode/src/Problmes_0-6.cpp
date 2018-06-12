@@ -66,3 +66,65 @@ void CodeChallengesOf30Days::Operators()
 
 }
 
+void CodeChallengesOf30Days::IntroToConditionalStatements()
+{
+    int N;
+    std::cin >> N;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    if(	N %2 == 1 )
+    	std::cout << "Weird" << std::endl;
+    else if( (N %2 == 0) && (N>=2 && N <= 5))
+    	std::cout << "Not Weird" << std::endl;
+    else if( (N %2 == 0) && (N>=6 && N <= 20))
+        	std::cout << "Weird" << std::endl;
+    else if( (N %2 == 0) && (N>20))
+        	std::cout << "Not Weird" << std::endl;
+}
+
+CodeChallengesOf30Days::Person4::Person4(int initialAge){
+        // Add some more code to run some checks on initialAge
+		if(initialAge < 0)
+		{
+			std::cout << "Age is not valid, setting age to 0." << std::endl;
+			this->age = 0;
+		}
+		else
+			this->age =initialAge;
+    }
+
+ void CodeChallengesOf30Days::Person4::amIOld()
+ {
+        // Do some computations in here and print out the correct statement to the console
+	 if(this->age < 13)
+		 std::cout << "You are young." << std::endl;
+	 else if (this->age >= 13 && this->age <18 )
+		 std::cout << "You are a teenager." << std::endl;
+	 else if (this->age >= 18)
+		 std::cout << "You are old." << std::endl;
+ }
+
+ void CodeChallengesOf30Days::Person4::yearPasses()
+ {
+        // Increment the age of the person in here
+	 this->age = this->age+1;
+}
+
+void CodeChallengesOf30Days::ClassesVsInstances()
+{
+	int t;
+	int age;
+	std::cin >> t;
+	for(int i=0; i < t; i++) {
+		std::cin >> age;
+		Person4 p(age);
+		p.amIOld();
+		for(int j=0; j < 3; j++) {
+			p.yearPasses();
+		}
+		p.amIOld();
+
+		std::cout << '\n';
+	}
+}
+

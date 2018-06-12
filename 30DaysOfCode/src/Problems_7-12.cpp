@@ -15,9 +15,9 @@ void CodeChallengesOf30Days::DictionariesAndMaps()
 	std::cin >> m_Entries;
 	for(int i=0;i<m_Entries;i++)
 	{
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin >> m_Name >> m_Number;
 		m_TelephoneDictonary.insert( std::pair<std::string,long int>(m_Name,m_Number));
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

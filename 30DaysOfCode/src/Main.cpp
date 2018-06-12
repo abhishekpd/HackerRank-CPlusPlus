@@ -16,12 +16,15 @@ int main()
 		std::cout << "Day 0 : Hello, World" << std::endl;
 		std::cout << "Day 1: Data Types" << std::endl;
 		std::cout << "Day 2: Operators" << std::endl;
+		std::cout << "Day 3: Intro to Conditional Statements" << std::endl;
 		std::cout << "Day 8: Dictionaries and Maps" << std::endl;
 		std::cout << "Day 9: Recursion" << std::endl;
 		std::cout << "Day 11: 2D Arrays" << std::endl;
 		std::cout << "Day 12: Inheritance" << std::endl;
 		std::cout << "Day 13: Abstract Classes" << std::endl;
 		std::cout << "Day 14: Scope" << std::endl;
+		std::cout << "Day 15: Linked List" << std::endl;
+		std::cout << "Day 16: Exceptions - String to Integer" << std::endl;
 		std::cout << "\nPlease enter the Input \t";
 		std::cin >> m_choice;
 		switch(m_choice)
@@ -34,6 +37,11 @@ int main()
 				break;
 			case 2:
 				CodeChallengesOf30Days::Operators();
+				break;
+			case 3:
+				CodeChallengesOf30Days::IntroToConditionalStatements();
+			case 4:
+				CodeChallengesOf30Days::ClassesVsInstances();
 				break;
 			case 8:
 				CodeChallengesOf30Days::DictionariesAndMaps();
@@ -52,6 +60,9 @@ int main()
 				break;
 			case 14:
 				CodeChallengesOf30Days::Scope();
+				break;
+			case 15:
+				CodeChallengesOf30Days::LinkedList();
 				break;
 			default:
 				break;
