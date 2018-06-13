@@ -18,6 +18,8 @@ namespace CodeChallengesOf30Days
 	void Operators();
 	void IntroToConditionalStatements();
 	void ClassesVsInstances();
+	void Loops();
+	void LetsReview();
 };
 
 #endif /* HEADER_PROBLMES_0_6_H_ */

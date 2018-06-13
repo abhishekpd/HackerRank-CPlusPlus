@@ -128,3 +128,34 @@ void CodeChallengesOf30Days::ClassesVsInstances()
 	}
 }
 
+void CodeChallengesOf30Days::Loops()
+{
+	int n;
+	std::cin >> n;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+	for(int i=1;i<11;i++)
+	{
+		std::cout << n <<" x " <<  i <<  " = " << (n*i) << std::endl;
+	}
+
+}
+
+void CodeChallengesOf30Days::LetsReview()
+{
+	int n;
+	std::vector<std::string> m_stringArray;
+	std::cin >> n;
+
+
+	for(int i=0;i<n;i++){
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cin >> m_stringArray.at(i);
+	}
+
+	for(int i=0;i<n;i++){
+		std::cout << m_stringArray.at(i);
+	}
+
+}
+

@@ -42,16 +42,14 @@ namespace CodeChallengesOf30Days
 			char calculate();
 	};
 
+	std::vector<std::string> split_string(std::string input_string);
+	void Arrays();
 	void TwoDArrays();
 	void DictionariesAndMaps();
 	void Recursion();
 	int RecursionFactorial(int number);
 	void Inheritance();
-
-
+	void BinaryNumbers();
 }
-
-
-
 
 #endif /* HEADER_PROBLEMS_7_12_H_ */

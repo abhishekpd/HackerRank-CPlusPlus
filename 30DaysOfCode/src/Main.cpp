@@ -11,14 +11,19 @@ int main()
 	int m_choice;
 	do
 	{
-		//if(system("CLS")) system("clear");
-		std::cout << "\n 30 Days of Code Challenges   Details " << std::endl;
+		std::cin.clear();
+		std::cout << "\n 30 Days of Code Challenges" << std::endl;
 		std::cout << "Day 0 : Hello, World" << std::endl;
 		std::cout << "Day 1: Data Types" << std::endl;
 		std::cout << "Day 2: Operators" << std::endl;
 		std::cout << "Day 3: Intro to Conditional Statements" << std::endl;
+		std::cout << "Day 4: Class vs. Instance" << std::endl;
+		std::cout << "Day 5: Loops" << std::endl;
+		std::cout << "Day 6: Let's Review" << std::endl;
+		std::cout << "Day 7: Arrays" << std::endl;
 		std::cout << "Day 8: Dictionaries and Maps" << std::endl;
 		std::cout << "Day 9: Recursion" << std::endl;
+		std::cout << "Day 10: Binary Numbers" << std::endl;
 		std::cout << "Day 11: 2D Arrays" << std::endl;
 		std::cout << "Day 12: Inheritance" << std::endl;
 		std::cout << "Day 13: Abstract Classes" << std::endl;
@@ -40,14 +45,27 @@ int main()
 				break;
 			case 3:
 				CodeChallengesOf30Days::IntroToConditionalStatements();
+				break;
 			case 4:
 				CodeChallengesOf30Days::ClassesVsInstances();
 				break;
+			case 5:
+				CodeChallengesOf30Days::Loops();
+				break;
+			case 6:
+				CodeChallengesOf30Days::LetsReview();
+				break;
+			case 7:
+				CodeChallengesOf30Days::Arrays();
+				break;
 			case 8:
 				CodeChallengesOf30Days::DictionariesAndMaps();
-					break;
+				break;
 			case 9:
 				CodeChallengesOf30Days::Recursion();
+				break;
+			case 10:
+				CodeChallengesOf30Days::BinaryNumbers();
 				break;
 			case 11:
 				CodeChallengesOf30Days::TwoDArrays();

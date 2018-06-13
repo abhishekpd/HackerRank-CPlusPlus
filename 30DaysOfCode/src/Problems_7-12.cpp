@@ -4,7 +4,59 @@
 #include <map>
 #include <limits>
 #include <string>
+#include <algorithm>
 
+
+std::vector<std::string> CodeChallengesOf30Days::split_string(std::string input_string) {
+    std::string::iterator new_end = std::unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) {
+        return x == y and x == ' ';
+    });
+
+    input_string.erase(new_end, input_string.end());
+
+    while (input_string[input_string.length() - 1] == ' ') {
+        input_string.pop_back();
+    }
+
+    std::vector<std::string> splits;
+    char delimiter = ' ';
+
+    size_t i = 0;
+    size_t pos = input_string.find(delimiter);
+
+    while (pos != std::string::npos) {
+        splits.push_back(input_string.substr(i, pos - i));
+
+        i = pos + 1;
+        pos = input_string.find(delimiter, i);
+    }
+
+    splits.push_back(input_string.substr(i, std::min(pos, input_string.length()) - i + 1));
+
+    return splits;
+}
+
+
+void CodeChallengesOf30Days::Arrays()
+{
+	int n;
+	std::cin >> n;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+	std::string arr_temp_temp;
+	std::getline(std::cin, arr_temp_temp);
+
+	std::vector<std::string> arr_temp = CodeChallengesOf30Days::split_string(arr_temp_temp);
+
+	std::vector<int> arr(n);
+	for (int i = 0; i < n; i++) {
+		int arr_item = stoi(arr_temp[i]);
+		arr[i] = arr_item;
+	}
+
+	for(int j=arr.size();j>0;j--)
+		std::cout << arr.at(j-1) << " ";
+}
 void CodeChallengesOf30Days::DictionariesAndMaps()
 {
 	std::map<std::string,long int> m_TelephoneDictonary;
@@ -57,6 +109,36 @@ int CodeChallengesOf30Days::RecursionFactorial(int number)
 		return 1;
 }
 
+void CodeChallengesOf30Days::BinaryNumbers()
+{
+	int n;
+	int i,one_count,max_count;
+	std::cout << "\nPlease input decimal number\t";
+	std::cin >> n;
+	std::vector<int> m_BinaryNumber;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	i=one_count=max_count=0;
+
+	while(n>0)
+	{
+		m_BinaryNumber.push_back((n%2));
+		n=n/2;
+		i++;
+	}
+
+	for(unsigned int j=0; j < m_BinaryNumber.size();j++)
+	{
+		if(m_BinaryNumber.at(j) == 1)
+		{
+			one_count++;
+			if(one_count > max_count)
+				max_count = one_count;
+		}
+		else
+			one_count =0;
+	}
+	std::cout << max_count << std::endl;
+}
 
 void CodeChallengesOf30Days::TwoDArrays()
 {
