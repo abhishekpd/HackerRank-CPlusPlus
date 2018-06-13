@@ -142,7 +142,7 @@ void CodeChallengesOf30Days::BinaryNumbers()
 
 void CodeChallengesOf30Days::TwoDArrays()
 {
-	std::vector<std::vector<int>> m_HourGlassMatrix(6);
+	std::vector< std::vector<int> > m_HourGlassMatrix(6);
 	int m_MaxSum, m_CurrentSum;
 	m_MaxSum = m_CurrentSum= -1000;
 
