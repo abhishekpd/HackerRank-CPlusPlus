@@ -5,14 +5,7 @@
 
 namespace IntroductionChallenges
 {
-	void VariableSizedArrays();
 	void ProblemsMenu();
-	void HelloWorld();
-	void InputandOutput();
-	void BasicDataTypes();
-	void ConditionalStatements();
 };
-
-
 
 #endif /* HEADER_INTRODUCTION_H_ */

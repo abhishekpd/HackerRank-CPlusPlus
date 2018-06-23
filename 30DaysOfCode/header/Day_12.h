@@ -1,14 +1,12 @@
-#pragma once
-#ifndef HEADER_PROBLEMS_7_12_H_
-#define HEADER_PROBLEMS_7_12_H_
-
+#ifndef HEADER_DAY_12_H_
+#define HEADER_DAY_12_H_
 #include <iostream>
-#include  <string>
+#include <string>
 #include <vector>
 
-namespace CodeChallengesOf30Days
-{
-	class Person{
+namespace Day_12{
+
+class Person{
 		protected:
 			std::string firstName;
 			std::string lastName;
@@ -41,15 +39,7 @@ namespace CodeChallengesOf30Days
 			Student(std::string firstName,std::string lastName, int identification,std::vector<int> scores);
 			char calculate();
 	};
-
-	std::vector<std::string> split_string(std::string input_string);
-	void Arrays();
-	void TwoDArrays();
-	void DictionariesAndMaps();
-	void Recursion();
-	int RecursionFactorial(int number);
 	void Inheritance();
-	void BinaryNumbers();
 }
 
-#endif /* HEADER_PROBLEMS_7_12_H_ */
+#endif /* HEADER_DAY_12_H_ */

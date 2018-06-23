@@ -5,9 +5,6 @@
 namespace StringChallenges
 {
 	void ProblemsMenu();
-	void Strings();
-	void StringStream();
-	void AttributeParser();
 }
 
 

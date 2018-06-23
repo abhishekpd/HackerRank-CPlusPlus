@@ -1,16 +1,36 @@
 #include <iostream>
-#include "../header/Problmes_0-6.h"
-#include "../header/Problems_7-12.h"
+
 #include "../header/Problems_13-18.h"
 #include <cstdlib>
 #include <limits>
 #include <iomanip>
+
+#include "../header/Day_00.h"
+#include "../header/Day_01.h"
+#include "../header/Day_02.h"
+#include "../header/Day_03.h"
+#include "../header/Day_04.h"
+#include "../header/Day_05.h"
+#include "../header/Day_06.h"
+#include "../header/Day_07.h"
+#include "../header/Day_08.h"
+#include "../header/Day_09.h"
+#include "../header/Day_10.h"
+#include "../header/Day_11.h"
+#include "../header/Day_12.h"
+#include "../header/Day_13.h"
+#include "../header/Day_14.h"
+#include "../header/Day_15.h"
+#include "../header/Day_16.h"
+#include "../header/Day_17.h"
+#include "../header/Day_18.h"
 
 int main()
 {
 	int m_choice;
 	do
 	{
+		m_choice = -1,
 		std::cin.clear();
 		std::cout << "\n 30 Days of Code Challenges" << std::endl;
 		std::cout << "Day 0 : Hello, World" << std::endl;
@@ -30,57 +50,68 @@ int main()
 		std::cout << "Day 14: Scope" << std::endl;
 		std::cout << "Day 15: Linked List" << std::endl;
 		std::cout << "Day 16: Exceptions - String to Integer" << std::endl;
+		std::cout << "Day 17: More Exceptions" << std::endl;
+		std::cout << "Day 18: Queues and Stacks" <<std::endl;
 		std::cout << "\nPlease enter the Input \t";
 		std::cin >> m_choice;
 		switch(m_choice)
 		{
 			case 0:
-				CodeChallengesOf30Days::HelloWorld();
+				Day_0::HelloWorld();
 				break;
 			case 1:
-				CodeChallengesOf30Days::DataTypes();
+				Day_1::DataTypes();
 				break;
 			case 2:
-				CodeChallengesOf30Days::Operators();
+				Day_2::Operators();
 				break;
 			case 3:
-				CodeChallengesOf30Days::IntroToConditionalStatements();
+				Day_3::IntroToConditionalStatements();
 				break;
 			case 4:
-				CodeChallengesOf30Days::ClassesVsInstances();
+				Day_4::ClassesVsInstances();
 				break;
 			case 5:
-				CodeChallengesOf30Days::Loops();
+				Day_5::Loops();
 				break;
 			case 6:
-				CodeChallengesOf30Days::LetsReview();
+				Day_6::LetsReview();
 				break;
 			case 7:
-				CodeChallengesOf30Days::Arrays();
+				Day_7::Arrays();
 				break;
 			case 8:
-				CodeChallengesOf30Days::DictionariesAndMaps();
+				Day_8::DictionariesAndMaps();
 				break;
 			case 9:
-				CodeChallengesOf30Days::Recursion();
+				Day_9::Recursion();
 				break;
 			case 10:
-				CodeChallengesOf30Days::BinaryNumbers();
+				Day_10::BinaryNumbers();
 				break;
 			case 11:
-				CodeChallengesOf30Days::TwoDArrays();
+				Day_11::TwoDArrays();
 				break;
 			case 12:
-				CodeChallengesOf30Days::Inheritance();
+				Day_12::Inheritance();
 				break;
 			case 13:
-				CodeChallengesOf30Days::AbstractClasses();
+				Day_13::AbstractClasses();
 				break;
 			case 14:
-				CodeChallengesOf30Days::Scope();
+				Day_14::Scope();
 				break;
 			case 15:
-				CodeChallengesOf30Days::LinkedList();
+				Day_15::LinkedList();
+				break;
+			case 16:
+				Day_16::ExceptionsStringToInteger();
+				break;
+			case 17:
+				Day_17::MoreExceptions();
+				break;
+			case 18:
+				Day_18::QueuesandStacks();
 				break;
 			default:
 				break;

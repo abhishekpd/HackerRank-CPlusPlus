@@ -1,4 +1,10 @@
 #include "../header/Introduction.h"
+#include "../header/Introduction/Helloworld.h"
+#include "../header/Introduction/InputandOutput.h"
+#include "../header/Introduction/BasicDataTypes.h"
+#include "../header/Introduction/ConditionalStatements.h"
+#include "../header/Introduction/VariableSizedArrays.h"
+
 #include <iostream>
 #include <vector>
 #include <iomanip>
@@ -14,111 +20,31 @@ void IntroductionChallenges::ProblemsMenu()
 	std::cout << "3) Basic Data Types" << std::endl;
 	std::cout << "4) Conditional Statements" << std::endl;
 	std::cout << "5) For Loop" << std::endl;
-	std::cout << "9) For Loop" << std::endl;
+	std::cout << "6) Functions" << std::endl;
+	std::cout << "7) Pointer" << std::endl;
+	std::cout << "8) Array Introduction" << std::endl;
+	std::cout << "9) Variable Sized Arrays" << std::endl;
 	std::cout << "Input your choice\t";
 	std::cin >> m_choice;
 
 	switch(m_choice)
 	{
 		case 1:
-			IntroductionChallenges::HelloWorld();
+			HelloWorld::HelloWorld();
 			break;
 		case 2:
-			IntroductionChallenges::InputandOutput();
+			InputandOutput::InputandOutput();
 			break;
 		case 3:
-			IntroductionChallenges::BasicDataTypes();
+			BasicDataTypes::BasicDataTypes();
+			break;
+		case 4:
+			ConditionalStatements::ConditionalStatements();
 			break;
 		case 9:
-			IntroductionChallenges::VariableSizedArrays();
+			VariableSizedArrays::VariableSizedArrays();
 			break;
 		default:
 			break;
 	}
-}
-
-void IntroductionChallenges::BasicDataTypes()
-{
-	int m_intInput;
-	float m_floatInput;
-	char m_CharInput;
-	long m_longInput;
-	double m_doubleInput;
-
-	std::cout << "Please Input Integer, Long, Character, Float and Double Separated by space in mentioned order" << std::endl;
-	std::cin >> m_intInput >> m_longInput >> m_CharInput >> m_floatInput >> m_doubleInput;
-
-	std::cout << m_intInput << std::endl;
-	std::cout << m_longInput << std::endl;
-	std::cout << m_CharInput << std::endl;
-	std::cout << std::fixed << std::setprecision(3) <<m_floatInput << std::endl;
-	std::cout << std::fixed << std::setprecision(9) << m_doubleInput << std::endl;
-}
-
-
-void IntroductionChallenges::HelloWorld()
-{
-	std::cout << "Hello, World!" << std::endl;
-}
-
-void IntroductionChallenges::InputandOutput()
-{
-	long int m_one,m_two,m_three;
-	std::cin >> m_one >> m_two >> m_three;
-	std::cout << (m_one + m_two + m_three);
-}
-
-void IntroductionChallenges::VariableSizedArrays()
-{
-	long int m_NoOfVariableSizeArray,m_size,m_input;
-	int m_NoOfQueries,arrayIndex,elementIndex;
-	std::cout << "Please Input number of variable array size and number of Queries" << std::endl;
-	std::cin >> m_NoOfVariableSizeArray >> m_NoOfQueries;
-	std::cout << " No of variable size array -->   " << m_NoOfVariableSizeArray <<  "\tNumber of Queries -->  " << m_NoOfQueries << std::endl;
-
-	std::vector<int> m_vector[m_NoOfVariableSizeArray];
-
-	for(int i=0;i < m_NoOfVariableSizeArray;i++){
-		std::cout << "Please Input variable first array size" << std::endl;
-		std::cin >> m_size;
-		for(int j=0;j<m_size;j++){
-			std::cin >> m_input;
-			m_vector[i].push_back(m_input);
-		}
-	}
-
-	std::cout << "Start Queries" << std::endl;
-	for(int k=0;k<m_NoOfQueries;k++){
-		std::cout << "Please input array index and Element Index for Query" << std::endl;
-		std::cin >> arrayIndex >> elementIndex;
-		std::cout << "Element present in   " << arrayIndex <<  "array at location   " <<  elementIndex <<  " is  -->  " << m_vector[arrayIndex].at(elementIndex) << std::endl;
-	}
-}
-
-void IntroductionChallenges::ConditionalStatements()
-{
-	int n;
-	std::cin >> n;
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	if(n==1)
-		std::cout << "one" <<std::endl;
-	else if(n==2)
-			std::cout << "two" <<std::endl;
-	else if(n==3)
-			std::cout << "three" <<std::endl;
-	else if(n==4)
-			std::cout << "four" <<std::endl;
-	else if(n==5)
-			std::cout << "five" <<std::endl;
-	else if(n==6)
-			std::cout << "six" <<std::endl;
-	else if(n==7)
-			std::cout << "seven" <<std::endl;
-	else if(n==8)
-			std::cout << "eight" <<std::endl;
-	else if(n==9)
-			std::cout << "nine" <<std::endl;
-	else if(n > 9)
-			std::cout << "Greater than 9" <<std::endl;
 }

@@ -6,56 +6,27 @@
 #include <vector>
 #include <map>
 #include <limits>
+#include <exception>
 
 namespace CodeChallengesOf30Days
 {
-	class Book{
-    	protected:
-        	std::string title;
-        	std::string author;
-    public:
-        	Book(std::string t,std::string a){
-        	title=t;
-        	author=a;
-       }
-        virtual void display()=0;
-        virtual ~Book();
-	};
 
-	class MyBook : Book
-	{
-		private:
-			int m_price;
-		public :
-			MyBook(std::string m_title,std::string m_author,int price);
-			virtual void display();
-			virtual ~MyBook();
-	};
 
-	class Difference {
-	    private:
-	    std::vector<int> elements;
-	  	public:
-	    Difference(std::vector<int> m_elements);
-	  	int maximumDifference;
-	  	void computeDifference();
-	};
-	class Node
-	{
-	    public:
-	        int data;
-	        Node *next;
-	        Node(int d);
-	};
-	class Solution{
-	    public:
-		 	 Node* insert(Node *head,int data);
-			void display(Node *head);
+
+
+
+	class Solution1{
+
+
+
 	};
 
 	void AbstractClasses();
-	void Scope();
-	void LinkedList();
+
+
+	void ExceptionsStringToInteger();
+
+	void QueuesandStacks();
 }
 
 

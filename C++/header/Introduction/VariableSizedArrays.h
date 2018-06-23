@@ -1,0 +1,9 @@
+#pragma once
+#ifndef HEADER_INTRODUCTION_VARIABLESIZEDARRAYS_H_
+#define HEADER_INTRODUCTION_VARIABLESIZEDARRAYS_H_
+
+namespace VariableSizedArrays{
+	void VariableSizedArrays();
+}
+
+#endif /* HEADER_INTRODUCTION_VARIABLESIZEDARRAYS_H_ */
